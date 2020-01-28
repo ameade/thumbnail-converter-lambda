@@ -1,2 +1,4 @@
 *.dist-info
 PIL
+package/
+*.zip
