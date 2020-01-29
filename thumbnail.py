@@ -6,6 +6,7 @@ max_width = 256
 max_height = 256
 image_format = "jpg"
 output_dir = "/tmp/thumbnails"
+input_bucket = "ameade-original-images"
 output_bucket = "ameade-thumbnail-images"
 
 def handler(event, context):  
@@ -61,7 +62,7 @@ def get_filename(key):
 
 if __name__ == "__main__":
     event = {
-      "bucket": "ameade-original-images",
+      "bucket": input_bucket,
       "object": "flower.png",
     }
     handler(event, None)
